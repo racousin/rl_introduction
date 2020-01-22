@@ -75,3 +75,6 @@ for pretrain moon landing
 ```bash
 python moon.py lander
 ```
+### Read
+
+- **Model-free** ([introduction_to_rl](introduction_to_rl.pdf))
