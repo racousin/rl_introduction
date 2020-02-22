@@ -15,6 +15,20 @@ class Agent:
     def train(current_state, action, reward, done):
         pass
 
+class DeepAgent:
+    def __init__(self, env, gamma = .99, epsilon = .01):
+        self.env = env
+        self.gamma = gamma
+        self.epsilon = epsilon
+        self.state_dim = env.observation_space.shape[0]
+        self.action_dim = env.action_space.n
+    def act(self, state):
+        pass
+    def train(current_state, action, reward, done):
+        pass
+
+
+
 def plot_values_lake(V):
     # reshape value function
     V_sq = np.reshape(V, (4,4))
