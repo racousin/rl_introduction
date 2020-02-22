@@ -4,17 +4,13 @@ import gym
 import scipy.signal
 
 class Agent:
-    def __init__(self, env, is_deterministic = False, gamma = .99, epsilon = .01):
+    def __init__(self, env, gamma = .99, epsilon = .01):
         self.env = env
         self.policy = np.ones([self.env.observation_space.n, self.env.action_space.n]) / self.env.action_space.n
-        self.is_deterministic = is_deterministic
         self.gamma = gamma
         self.epsilon = epsilon
     def act(self, state):
-        if self.is_deterministic:
-            action = np.argmax(self.policy[state])
-        else:
-            action = np.random.choice(np.arange(self.env.action_space.n),p=self.policy[state])
+        action = np.random.choice(np.arange(self.env.action_space.n),p=self.policy[state])
         return action
     def train(current_state, action, reward, done):
         pass
