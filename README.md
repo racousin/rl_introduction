@@ -24,7 +24,10 @@ Be sure to be in python 3.6.9
 ```bash
 pip3 install virtualenv
 ```
-
+### Clone
+```
+git clone --recurse-submodules https://github.com/racousin/rl_instroduction.git
+```
 Create a virtual environment:
 
 ```bash
