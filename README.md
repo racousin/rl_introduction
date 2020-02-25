@@ -38,12 +38,13 @@ source venv/bin/activate
 Update and install requirements
 ```bash
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ### Learn and train
 
 ```bash
-jupyter notebook/
+jupyter notebook
 ```
 ### Read
 
