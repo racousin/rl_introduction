@@ -26,7 +26,7 @@ pip3 install virtualenv
 ```
 ### Clone
 ```
-git clone --recurse-submodules https://github.com/racousin/rl_introduction.git
+git clone https://github.com/racousin/rl_introduction.git
 ```
 Create a virtual environment:
 
