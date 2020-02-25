@@ -28,6 +28,22 @@ class DeepAgent:
         pass
 
 
+def policy_evaluation(env, policy, gamma=1, theta=1e-8):
+    V = np.zeros(env.observation_space.n)
+    while True:
+        delta = 0
+        for s in range(env.observation_space.n):
+            Vs = 0
+            for a, action_prob in enumerate(policy[s]):
+                for prob, next_state, reward, done in env.P[s][a]:
+                    Vs += action_prob * prob * (reward + gamma * V[next_state])
+            delta = max(delta, np.abs(V[s]-Vs))
+            V[s] = Vs
+        if delta < theta:
+            break
+    return V
+
+
 
 def plot_values_lake(V):
     # reshape value function
@@ -58,6 +74,19 @@ def policy_improvement(env, V, gamma=1):
         policy[s] = np.sum([np.eye(env.action_space.n)[i] for i in best_a], axis=0)/len(best_a)
 
     return policy
+
+def value_iteration(env, gamma=1, theta=1e-8):  
+    V = np.zeros(env.nS)
+    while True:
+        delta = 0
+        for s in range(env.nS):
+            v = V[s]
+            V[s] = max(q_from_v(env, V, s, gamma))
+            delta = max(delta,abs(V[s]-v))
+        if delta < theta:
+            break
+    policy = policy_improvement(env, V, gamma)
+    return policy, V
 
 def discount_cumsum(x, discount):
     return scipy.signal.lfilter([1], [1, float(-discount)], x[::-1], axis=0)[::-1]
