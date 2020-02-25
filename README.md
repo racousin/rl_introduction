@@ -40,43 +40,10 @@ Update and install requirements
 pip install -r requirements.txt
 ```
 
-Test install
-```bash
-cd src/
-python moon.py
-```
-
 ### Learn and train
 
 ```bash
-jupyter notebooks
-```
-
-### Run and display
-
-```bash
-cd src/
-```
-
-let file name empty for random of fill with save algorithm
-for cart
-```bash
-python cart.py file_name
-```
-
-for mountain
-```bash
-python mountain.py file_name
-```
-
-for moon landing
-```bash
-python moon.py file_name
-```
-
-for pretrain moon landing
-```bash
-python moon.py lander
+jupyter notebook/
 ```
 ### Read
 
