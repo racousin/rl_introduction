@@ -1,5 +1,9 @@
 # rl_introduction
 
+## Run in colab
+<a href="https://colab.research.google.com/github/racousin/rl_introduction/blob/master/notebooks/main.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+## Run locally
+
 ### Install requirement
 
 
@@ -44,7 +48,7 @@ pip install -e .
 ### Learn and train
 
 ```bash
-jupyter notebook
+jupyter notebook notbooks
 ```
 ### Read
 
