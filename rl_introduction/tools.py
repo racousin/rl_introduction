@@ -15,6 +15,14 @@ class Agent:
     def train(current_state, action, reward, done):
         pass
 
+class MyRandomAgent(Agent):
+    def __init__(self, env):
+        super().__init__(env)
+        self.policy = np.ones([self.env.observation_space.n, self.env.action_space.n]) / self.env.action_space.n
+    def act(self, state):
+        action = np.random.choice(np.arange(self.env.action_space.n),p=self.policy[state])
+        return action
+
 class DeepAgent:
     def __init__(self, env, gamma = .99, epsilon = .01):
         self.env = env
