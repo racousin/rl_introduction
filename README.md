@@ -23,7 +23,7 @@ Install Ubuntu!
 ```
 
 ### Setup your python environment
-Be sure to be in python 3.6.9
+Be sure to be in python 3.8.5
 
 ```bash
 pip3 install virtualenv
@@ -35,6 +35,7 @@ git clone https://github.com/racousin/rl_introduction.git
 Create a virtual environment:
 
 ```bash
+cd _rl_introduction
 virtualenv venv
 source venv/bin/activate
 ```
