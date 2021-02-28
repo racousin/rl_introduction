@@ -50,7 +50,7 @@ pip install -e .
 ### Learn and train
 
 ```bash
-jupyter notebook notbooks
+jupyter notebook notebooks
 ```
 ### Read
 
