@@ -23,9 +23,10 @@ Install Ubuntu!
 ```
 
 ### Setup your python environment
-Be sure to be in python 3.8.5
+Be sure to be in python 3.6.5
 
 ```bash
+pyenv install 3.6.5
 pip3 install virtualenv
 ```
 ### Clone
@@ -36,7 +37,7 @@ Create a virtual environment:
 
 ```bash
 cd _rl_introduction
-virtualenv venv
+virtualenv venv -p ~/.pyenv/versions/3.6.5/bin/python
 source venv/bin/activate
 ```
 
