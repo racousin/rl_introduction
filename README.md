@@ -36,7 +36,7 @@ git clone https://github.com/racousin/rl_introduction.git
 Create a virtual environment:
 
 ```bash
-cd _rl_introduction
+cd rl_introduction
 virtualenv venv -p ~/.pyenv/versions/3.6.5/bin/python
 source venv/bin/activate
 ```
