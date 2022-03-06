@@ -23,11 +23,11 @@ Install Ubuntu!
 ```
 
 ### Setup your python environment
-Be sure to be in python 3.6.5
+Be sure to be in python 3.7.12
 
 ```bash
-pyenv install 3.6.5
-pip3 install virtualenv
+pyenv install 3.7.12
+pip install virtualenv
 ```
 ### Clone
 ```
@@ -37,13 +37,19 @@ Create a virtual environment:
 
 ```bash
 cd _rl_introduction
-virtualenv venv -p ~/.pyenv/versions/3.6.5/bin/python
+~/.pyenv/versions/3.7.12/bin/python -m venv venv
 source venv/bin/activate
 ```
 
 Update and install requirements
 ```bash
 pip install -r requirements.txt
+pip install -e .
+```
+If you also want to play with mujoco. Follow https://github.com/openai/mujoco-py and
+Update and install requirements
+```bash
+pip install -r requirements_mujoco.txt
 pip install -e .
 ```
 

@@ -84,10 +84,10 @@ def policy_improvement(env, V, gamma=1):
     return policy
 
 def value_iteration(env, gamma=1, theta=1e-8):  
-    V = np.zeros(env.nS)
+    V = np.zeros(env.observation_space.n)
     while True:
         delta = 0
-        for s in range(env.nS):
+        for s in range(env.observation_space.n):
             v = V[s]
             V[s] = max(q_from_v(env, V, s, gamma))
             delta = max(delta,abs(V[s]-v))
