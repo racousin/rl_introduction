@@ -43,7 +43,7 @@ source venv/bin/activate
 
 Update and install requirements
 ```bash
-pip install -r requirments.txt 
+pip install -r requirements.txt
 pip install -e .
 ```
 
