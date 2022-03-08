@@ -97,7 +97,7 @@ qtconsole==5.2.2
 QtPy==2.0.1
 requests==2.27.1
 requests-oauthlib==1.3.1
--e git+https://github.com/racousin/rl_introduction.git@1f59d2d6bcab4ca0e3cd24cd8a069d2edf5bfac8#egg=rl_introduction_pkg
+-e git+https://github.com/racousin/rl_introduction.git@73023c97a08afc20b5e5f585bd53771b34bcdab3#egg=rl_introduction_pkg
 rsa==4.8
 scipy==1.7.3
 seaborn==0.11.2
