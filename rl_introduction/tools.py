@@ -12,7 +12,7 @@ class Agent:
     def act(self, state):
         action = np.random.choice(np.arange(self.env.action_space.n),p=self.policy[state])
         return action
-    def train(current_state, action, reward, done):
+    def train(self, current_state, action, reward, state, done):
         pass
 
 class MyRandomAgent(Agent):
