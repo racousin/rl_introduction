@@ -53,6 +53,17 @@ pip install -r requirements_mujoco.txt
 pip install -e .
 ```
 
+### Run with docker
+install docker https://docs.docker.com/engine/install/ubuntu/
+
+```
+docker build -t rl_intro .
+docker run -t -p 8888:8888 --name  rl_intro -v ${PWD}/notebooks:/app/notebooks rl_intro 
+
+```
+Go on brother http://localhost:8888/
+And use the copy the token from your terminal
+
 ### Learn and train
 
 ```bash
