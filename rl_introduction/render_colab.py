@@ -106,7 +106,10 @@ def gym_render(
     state = env.reset()
     done = False
     while not done or max_step > 0:
-        action = env.action_space.sample()
+        if agent == "random":
+            action = env.action_space.sample()
+        else:
+            action = agent.act(state)
         state, reward, done, info = env.step(action)
         max_step -= 1
 
