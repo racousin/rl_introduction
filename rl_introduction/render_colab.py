@@ -93,6 +93,7 @@ class Recorder(gym.Wrapper):
 
 def gym_render(
     env_name="FrozenLake-v1",
+    env=None,
     directory="./video",
     size=None,
     fps=None,
@@ -100,7 +101,8 @@ def gym_render(
     agent="random",
     max_step=500,
 ):
-    env = gym.make(env_name)
+    if env is None:
+        env = gym.make(env_name)
     directory = directory
     env = Recorder(env, directory, slow_coeff=slow_coeff, size=size, fps=fps)
     state = env.reset()
