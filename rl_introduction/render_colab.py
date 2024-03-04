@@ -26,8 +26,6 @@ def display_video(path):
     ipythondisplay.display(ipythondisplay.Video(path, embed=True))
 
 
-
-
 def exp_render(env_config):
     virtual_display = Display(visible=0, size=(1400, 900))
     virtual_display.start()
