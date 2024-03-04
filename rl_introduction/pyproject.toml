@@ -1,17 +1,14 @@
 [tool.poetry]
-name = "rl_introduction"
+name = "rl-pkg"
 version = "0.1.0"
 description = ""
 authors = ["racousin <racousin@student.42.fr>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-jupyter = "^1.0.0"
-seaborn = "^0.13.2"
-gymnasium = "^0.29.1"
+python = "^3.10"
 
-[tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
