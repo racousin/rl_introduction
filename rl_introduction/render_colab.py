@@ -6,8 +6,7 @@ from IPython import display as ipythondisplay
 from pyvirtualdisplay import Display
 import cv2
 
-virtual_display = Display(visible=0, size=(1400, 900))
-virtual_display.start()
+
 
 # Function to save frames and display as video
 def save_video_of_model(exp_name, env_name, frames, fps, scale=2):
