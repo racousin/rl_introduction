@@ -33,7 +33,7 @@ def exp_render(env_config):
     virtual_display = Display(visible=0, size=(1400, 900))
     virtual_display.start()
     env = gym.make(env_config["name"], render_mode='rgb_array')
-    observation = env.reset()
+    observation = env.reset()[0]
     done = False
     step = 0
     frames = []
