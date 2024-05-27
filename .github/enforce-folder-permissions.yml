@@ -1,0 +1,32 @@
+name: Enforce Folder Permissions
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  enforce-permissions:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Fetches all history for branches and tags
+
+    - name: Check folder permissions
+      run: |
+        # Get list of changed files compared to the base branch
+        FILES_CHANGED=$(git diff --name-only ${{ github.base_ref }}...${{ github.head_ref }})
+
+        # Extract GitHub username from actor
+        USER="${{ github.actor }}"
+
+        # Check if changes are only within user's folder
+        for FILE in $FILES_CHANGED; do
+          if [[ "$FILE" != "$USER/"* && "$FILE" != "common/"* ]]; then
+            echo "::error file=$FILE,Title=Unauthorized File Modification::You can only modify files in your own directory."
+            exit 1
+          fi
+        done
+
